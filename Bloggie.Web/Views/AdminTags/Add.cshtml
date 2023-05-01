@@ -1,7 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Bloggie.Web.Models.ViewModels.AddTagRequest
 @{
+
 }
 <div class="bg-secondary bg-opacity-10 py-2">
     <div class="container">
@@ -13,15 +12,15 @@
     <form method="post" action="SubmitTag">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" asp-for="Name">
         </div>
         <div class="mb-3">
             <label for="displayname" class="form-label">Display Name</label>
-            <input type="text" class="form-control" id="displayname" name="displayName">
+            <input type="text" class="form-control" id="displayname" asp-for="DisplayName">
         </div>
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-dark">Submit</button>
         </div>
-        
+
     </form>
 </div>
